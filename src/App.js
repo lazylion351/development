@@ -40,7 +40,6 @@ function App() {
         <Container>
           <Grid container spacing={3}>
             <Grid item xs>
-              
               <OptionsItem />
             </Grid>
             <Grid item xs={9.5}>
