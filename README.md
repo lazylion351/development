@@ -37,11 +37,17 @@ Within App.js, I first had two AppBars: the first with the logo and heading, and
 data loads in the raw data from the JSON file. There are several hooks here to modify this data:
 
 filterTeam/setFilterTeam – what teams are currently selected, defaults to "All" teams
+
 sortType/setSortType – whether to sort by "Points" or "Race Wins"
+
 sortOrder/setSortOrder – whether to sort in decreasing (highest first) or increasing (lowest first) order
+
 raceWinnersOnly/setRaceWinnersOnly – whether to display only drivers that have won at least one race
+
 favouritesOnly/setFavouritesOnly – whether to display only drivers that are in the favourites list
+
 favList/setFavList – keeps track of the names of drivers that are currently marked as favourites
+
 favPoints/setFavPoints – keeps track of the sum of the points of the drivers in the favourites list
 
 The data list is then sorted based on sortType and sortOrder, and then filtered based on filterTeam, raceWinnersOnly and favouritesOnly.
