@@ -10,6 +10,9 @@ import CssBaseline from '@mui/material/CssBaseline';
 import AppBar from '@mui/material/AppBar';
 import Stack from '@mui/material/Stack';
 import Card from '@mui/material/Card';
+import Typography from '@mui/material/Typography';
+import Toolbar from '@mui/material/Toolbar';
+
 
 data.forEach((item) => {
   item.image = process.env.PUBLIC_URL + "/" + item.image;
@@ -98,6 +101,11 @@ function App() {
         <AppBar position="static">
           <img src={logo_src} alt="Formula 1 Logo" class="logo"/>
         </AppBar>  
+        <AppBar position="static" sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around'}}>
+          <Typography component="div" variant="h6">
+            Your Favourites Points: {favPoints}
+          </Typography>
+        </AppBar> 
         <Container>
           <Grid container spacing={3}>
             <Grid item xs>
@@ -110,7 +118,7 @@ function App() {
               <Grid container spacing={3}>
                 {filteredData.map((item, index) => ( 
                   <Grid item xs={12} sm={6} md={6}>
-                    <DriverItem name={item.name} country={item.country} team={item.team} points={item.points}
+                    <DriverItem name={item.name} team={item.team} points={item.points}
                     wins={item.wins} image={item.image}
                     favPoints={favPoints} setFavPoints={setFavPoints}
                     favList={favList} setFavList={setFavList}

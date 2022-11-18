@@ -19,11 +19,6 @@ import Stack from '@mui/material/Stack';
 
 export default function OptionsItem(props) {
 
-    const handleClick = () => {
-        props.setItems([...props.items, props.name])
-        props.updatePrice(props.totalPrice + props.price)
-    }
-
     const handleSortOrder = (event) => {
         props.setSortType(event.target.value);
     };
@@ -104,6 +99,8 @@ export default function OptionsItem(props) {
                     />
                     </FormGroup>
                 </FormControl>
+                <Divider />
+                Your Points: {props.favPoints}
             </Stack>
             </CardContent>
             </Card>

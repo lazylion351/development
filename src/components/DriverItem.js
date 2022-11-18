@@ -7,23 +7,16 @@ import CardActions from '@mui/material/CardActions';
 import Button from '@mui/material/Button';
 import ToggleButton from '@mui/material/ToggleButton';
 import { useState } from "react";
+import FavouritesItem from "./FavouritesItem.js";
 
 export default function DriverItem(props) {
-
-    const handleClick = () => {
-        props.setFavList([...props.favList, props.name])
-        props.setFavPoints(props.favPoints + props.points)
-    }
-
-    const [buttonVariant, setButtonVariant] = useState("text");
-    const [buttonText, setButtonText] = useState("Add to Favourites");
 
 	return (
         <div>
             <Card sx={{ display: 'flex', justifyContent: 'space-between'}} elevation={1}>
                 <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                     <CardContent sx={{ flex: '1 0 auto' }}>
-                    <Typography component="div" variant="h5">
+                    <Typography component="div" variant="h5" align="left">
                         {props.name}
                     </Typography>
                     <Typography variant="subtitle1" color="text.secondary" component="div" align="left">
@@ -37,20 +30,17 @@ export default function DriverItem(props) {
                     </Typography>
                     </CardContent>
                     <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
-                        <Button 
-                        size="small" 
-                        variant={buttonVariant}
-                        onClick={handleClick}
-                        >
-                            {buttonText}
-                        </Button>
+                        <FavouritesItem name={props.name} points={props.points}
+                        favPoints={props.favPoints} setFavPoints={props.setFavPoints}
+                        favList={props.favList} setFavList={props.setFavList}
+                        />
                     </Box>
                 </Box>
                 <CardMedia
                     component="img"
                     sx={{ width: 161 }}
                     image={props.image}
-                    alt="Live from space album cover"
+                    alt={props.image}
                     style={{
                         justify: 'right',
                         alignContent: 'right',
