@@ -103,7 +103,7 @@ function App() {
         </AppBar>  
         <AppBar position="static" sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around'}}>
           <Typography component="div" variant="h6">
-            Your Favourites Points: {favPoints}
+            Favourites Points: {favPoints}
           </Typography>
         </AppBar> 
         <Container>
@@ -128,8 +128,8 @@ function App() {
               </Grid>
             </Grid>
           </Grid>
-          
         </Container>
+        <br></br>
         </Stack>
         </Container>
       </ThemeProvider>

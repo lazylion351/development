@@ -99,12 +99,9 @@ export default function OptionsItem(props) {
                     />
                     </FormGroup>
                 </FormControl>
-                <Divider />
-                Your Points: {props.favPoints}
             </Stack>
             </CardContent>
             </Card>
         </div>
-      
       );
 }
