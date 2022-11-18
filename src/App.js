@@ -25,8 +25,69 @@ function App() {
     },
   });
 
-  const [type, setType] = useState("All");
+  const [filterTeam, setFilterTeam] = useState("All");
+  const [sortType, setSortType] = useState("Points");
+  const [sortOrder, setSortOrder] = useState(false);
+  const [raceWinnersOnly, setRaceWinnersOnly] = useState(false);
+  const [favouritesOnly, setFavouritesOnly] = useState(false);
+  const [favPoints, setFavPoints] = useState(0);
+  const [favList, setFavList] = useState([]);
 
+  const sortingFunction = (d1, d2) => {
+    if (sortType === "Points") {
+      if (sortOrder == false) {
+        return d2.points - d1.points
+      } else {
+        return d1.points - d2.points
+      }
+    } else if (sortType === "Wins") {
+      if (sortOrder == false) {
+        return d2.wins - d1.wins
+      } else {
+        return d1.wins - d2.wins
+      }
+    } else {
+      console.log("error")
+    }
+  };
+
+  const matchesFilterType = item => {
+    if(checkTeam(item) && checkWinnersOnly(item) && checkFavourites(item)) { 
+      return true
+    } else {
+      return false
+    }
+  };
+
+  const checkTeam = item => {
+    if(filterTeam === "All") { 
+      return true
+    } else if (filterTeam === item.team) {
+      return true
+    } else {
+      return false
+    }
+  };
+
+  const checkWinnersOnly = item => {
+    if(raceWinnersOnly === true) { 
+      return (item.wins > 0)
+    }  else {
+      return true
+    }
+  };
+
+  const checkFavourites = item => {
+    if(favouritesOnly === true) { 
+      return (favList.includes(item.name))
+    }  else {
+      return true
+    }
+  };
+  
+  const sortedData = data.sort(sortingFunction)
+
+  const filteredData = sortedData.filter(matchesFilterType)
 
   return (
     <div className="App">
@@ -40,14 +101,20 @@ function App() {
         <Container>
           <Grid container spacing={3}>
             <Grid item xs>
-              <OptionsItem />
+              <OptionsItem setSortType={setSortType} sortOrder={sortOrder} setSortOrder={setSortOrder}
+              setFilterTeam={setFilterTeam} raceWinnersOnly={raceWinnersOnly}
+              setRaceWinnersOnly={setRaceWinnersOnly} favouritesOnly={favouritesOnly}
+              setFavouritesOnly={setFavouritesOnly}/>
             </Grid>
             <Grid item xs={9.5}>
               <Grid container spacing={3}>
-                {data.map((item, index) => ( 
+                {filteredData.map((item, index) => ( 
                   <Grid item xs={12} sm={6} md={6}>
                     <DriverItem name={item.name} country={item.country} team={item.team} points={item.points}
-                    wins={item.wins} image={item.image}/>
+                    wins={item.wins} image={item.image}
+                    favPoints={favPoints} setFavPoints={setFavPoints}
+                    favList={favList} setFavList={setFavList}
+                    />
                   </Grid>
                 ))}
               </Grid>

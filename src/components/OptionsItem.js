@@ -12,6 +12,10 @@ import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import FormGroup from '@mui/material/FormGroup';
 import Checkbox from '@mui/material/Checkbox';
+import Switch from '@mui/material/Switch';
+import { useState } from "react";
+import Divider from '@mui/material/Divider';
+import Stack from '@mui/material/Stack';
 
 export default function OptionsItem(props) {
 
@@ -20,56 +24,87 @@ export default function OptionsItem(props) {
         props.updatePrice(props.totalPrice + props.price)
     }
 
+    const handleSortOrder = (event) => {
+        props.setSortType(event.target.value);
+    };
+
+    const handleCheckedChange = (event) => {
+        props.setSortOrder(event.target.checked);
+    };
+
+    const handleTeamChange = (event) => {
+        props.setFilterTeam(event.target.value);
+    };
+
+    const handleRaceWinnersChange = (event) => {
+        props.setRaceWinnersOnly(event.target.checked);
+    };
+
+    const handleFavouritesChange = (event) => {
+        props.setFavouritesOnly(event.target.checked);
+    };
+    
 	return (
         <div>
             <Card sx={{ display: 'flex', flexDirection: 'column'}} elevation={1}>
             <CardContent sx={{ flex: '1 0 auto' }}>
+            <Stack spacing={2}>
                 <FormControl>
                     <FormLabel id="demo-radio-buttons-group-label">Sort by</FormLabel>
                     <RadioGroup
                         aria-labelledby="demo-radio-buttons-group-label"
-                        defaultValue="points"
+                        defaultValue="Points"
                         name="radio-buttons-group"
+                        onChange={handleSortOrder}
                     >
-                        <FormControlLabel value="points" control={<Radio />} label="Points" />
-                        <FormControlLabel value="racewins" control={<Radio />} label="Race Wins" />
+                        <FormControlLabel value="Points" control={<Radio />} label="Points" />
+                        <FormControlLabel value="Wins" control={<Radio />} label="Race Wins" />
                     </RadioGroup>
-                </FormControl>
-
-                <FormControl sx={{ m: 3 }} component="fieldset" variant="standard">
-                    <FormLabel component="legend">Team</FormLabel>
-                    <FormGroup>
                     <FormControlLabel
                         control={
-                        // <Checkbox checked={gilad} onChange={handleChange} name="redbull" />
-                        <Checkbox name="redbull" />
+                            <Switch checked={props.checked} onChange={handleCheckedChange} name="increasing" size="medium" />
                         }
-                        label="Red Bull"
+                        label="Lowest First"
                     />
-                    </FormGroup>
                 </FormControl>
-
+                <Divider />
+                <FormControl>
+                    <FormLabel id="demo-radio-buttons-group-label">Team</FormLabel>
+                    <RadioGroup
+                        aria-labelledby="demo-radio-buttons-group-label"
+                        defaultValue="All"
+                        name="radio-buttons-group"
+                        onChange={handleTeamChange}
+                    >
+                        <FormControlLabel value="All" control={<Radio />} label="All Teams" />
+                        <FormControlLabel value="Red Bull Racing" control={<Radio />} label="Red Bull" />
+                        <FormControlLabel value="Ferrari" control={<Radio />} label="Ferrari" />
+                        <FormControlLabel value="Mercedes" control={<Radio />} label="Mercedes" />
+                        <FormControlLabel value="McLaren" control={<Radio />} label="McLaren" />
+                        <FormControlLabel value="Alpine" control={<Radio />} label="Alpine" />
+                        <FormControlLabel value="Alfa Romeo" control={<Radio />} label="Alfa Romeo" />
+                        <FormControlLabel value="Aston Martin" control={<Radio />} label="Aston Martin" />
+                    </RadioGroup>
+                </FormControl>
+                <Divider />
                 <FormControl sx={{ m: 3 }} component="fieldset" variant="standard">
                     <FormLabel component="legend">Other</FormLabel>
                     <FormGroup>
                     <FormControlLabel
                         control={
-                        // <Checkbox checked={gilad} onChange={handleChange} name="redbull" />
-                        <Checkbox name="won race" />
+                        <Checkbox checked={props.raceWinnersOnly} onChange={handleRaceWinnersChange}/>
                         }
-                        label="Won A Race"
+                        label="Race Winners"
                     />
                     <FormControlLabel
                         control={
-                        // <Checkbox checked={gilad} onChange={handleChange} name="redbull" />
-                        <Checkbox name="favourites" />
+                        <Checkbox checked={props.favouritesOnly} onChange={handleFavouritesChange}/>
                         }
                         label="Favourites"
                     />
                     </FormGroup>
                 </FormControl>
-
-
+            </Stack>
             </CardContent>
             </Card>
         </div>

@@ -1,99 +1,87 @@
 [
     {
         "name": "Max Verstappen",
-        "country": "Netherlands",
         "team": "Red Bull Racing",
         "points": 429,
         "wins": 14,
         "image": "images/max.jpg"
     },
     {
-        "name": "Max Verstappen",
-        "country": "Netherlands",
-        "team": "Red Bull Racing",
-        "points": 429,
-        "wins": 14,
-        "image": "images/max.jpg"
+        "name": "Charles Leclerc",
+        "team": "Ferrari",
+        "points": 290,
+        "wins": 3,
+        "image": "images/charles.jpg"
     },
     {
-        "name": "Max Verstappen",
-        "country": "Netherlands",
+        "name": "Sergio Perez",
         "team": "Red Bull Racing",
-        "points": 429,
-        "wins": 14,
-        "image": "images/max.jpg"
+        "points": 290,
+        "wins": 2,
+        "image": "images/perez.jpg"
     },
     {
-        "name": "Max Verstappen",
-        "country": "Netherlands",
-        "team": "Red Bull Racing",
-        "points": 429,
-        "wins": 14,
-        "image": "images/max.jpg"
+        "name": "George Russell",
+        "team": "Mercedes",
+        "points": 265,
+        "wins": 1,
+        "image": "images/george.jpg"
     },
     {
-        "name": "Max Verstappen",
-        "country": "Netherlands",
-        "team": "Red Bull Racing",
-        "points": 429,
-        "wins": 14,
-        "image": "images/max.jpg"
+        "name": "Lewis Hamilton",
+        "team": "Mercedes",
+        "points": 240,
+        "wins": 0,
+        "image": "images/lewis.jpg"
     },
     {
-        "name": "Max Verstappen",
-        "country": "Netherlands",
-        "team": "Red Bull Racing",
-        "points": 429,
-        "wins": 14,
-        "image": "images/max.jpg"
+        "name": "Carlos Sainz Jr.",
+        "team": "Ferrari",
+        "points": 234,
+        "wins": 1,
+        "image": "images/sainz.jpg"
     },
     {
-        "name": "Max Verstappen",
-        "country": "Netherlands",
-        "team": "Red Bull Racing",
-        "points": 429,
-        "wins": 14,
-        "image": "images/max.jpg"
+        "name": "Lando Norris",
+        "team": "McLaren",
+        "points": 113,
+        "wins": 0,
+        "image": "images/lando.jpg"
     },
     {
-        "name": "Max Verstappen",
-        "country": "Netherlands",
-        "team": "Red Bull Racing",
-        "points": 429,
-        "wins": 14,
-        "image": "images/max.jpg"
+        "name": "Esteban Ocon",
+        "team": "Alpine",
+        "points": 86,
+        "wins": 0,
+        "image": "images/ocon.jpg"
     },
     {
-        "name": "Max Verstappen",
-        "country": "Netherlands",
-        "team": "Red Bull Racing",
-        "points": 429,
-        "wins": 14,
-        "image": "images/max.jpg"
+        "name": "Fernando Alonso",
+        "team": "Alpine",
+        "points": 81,
+        "wins": 0,
+        "image": "images/alonso.jpg"
     },
     {
-        "name": "Max Verstappen",
-        "country": "Netherlands",
-        "team": "Red Bull Racing",
-        "points": 429,
-        "wins": 14,
-        "image": "images/max.jpg"
+        "name": "Valtteri Bottas",
+        "team": "Alfa Romeo",
+        "points": 49,
+        "wins": 0,
+        "image": "images/bottas.jpg"
     },
     {
-        "name": "Max Verstappen",
-        "country": "Netherlands",
-        "team": "Red Bull Racing",
-        "points": 429,
-        "wins": 14,
-        "image": "images/max.jpg"
+        "name": "Sebastian Vettel",
+        "team": "Aston Martin",
+        "points": 36,
+        "wins": 0,
+        "image": "images/vettel.jpg"
     },
     {
-        "name": "Max Verstappen",
-        "country": "Netherlands",
-        "team": "Red Bull Racing",
-        "points": 429,
-        "wins": 14,
-        "image": "images/max.jpg"
+        "name": "Daniel Ricciardo",
+        "team": "McLaren",
+        "points": 35,
+        "wins": 0,
+        "image": "images/daniel.jpg"
     }
   ]
   
