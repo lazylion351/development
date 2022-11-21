@@ -14,7 +14,7 @@ They can filter for drivers from specific teams as well as drivers that have won
 
 They can sort drivers based on Points as well as Race wins. By default, this orders drivers from most Points/Race Wins to least, but users can change this to see drivers with the lowest Points/Race wins first.
 
-Users can create a collection of their favourite drivers and the application will display the sum of the their favourite drivers' points field.
+Users can create a collection of their favourite drivers and the application will display the sum of their favourite drivers' points field.
 
 ### Usability Principles Considered
 
