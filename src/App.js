@@ -98,7 +98,7 @@ function App() {
       <CssBaseline />
       <Container>
       <Stack spacing={3}>
-        <AppBar position="static" sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
+        <AppBar position="static" sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: "center"}}>
           <img src={logo_src} alt="Formula 1 Logo" class="logo" align="left"/>
           <Typography component="div" variant="h3" sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
             Formula 1 Drivers &nbsp;

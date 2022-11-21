@@ -38,7 +38,7 @@ export default function DriverItem(props) {
                 </Box>
                 <CardMedia
                     component="img"
-                    sx={{ width: 161 }}
+                    sx={{ width: 161, height:187 }}
                     image={props.image}
                     alt={props.image}
                     style={{
