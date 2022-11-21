@@ -69,4 +69,5 @@ Similarly, when the user clicks on the "Race Winners" or "Favourites" buttons, t
 ### Sources
 
 Statistics and Images: www.formula1.com
+
 Documentation: https://mui.com/material-ui/
