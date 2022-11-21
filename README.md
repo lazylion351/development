@@ -65,3 +65,8 @@ When the user clicked on Points or Race Wins (within sortBy), this changes sortT
 When the user clicks on a team (in the Team section), this changes filterTeam which changes the filteredData list which changes which DriverItems are created.
 
 Similarly, when the user clicks on the "Race Winners" or "Favourites" buttons, this changes raceWinnersOnly or favouritesOnly which, similarly, changes  the filteredData list which changes which DriverItems are created.
+
+### Sources
+
+Statistics and Images: www.formula1.com
+Documentation: https://mui.com/material-ui/
